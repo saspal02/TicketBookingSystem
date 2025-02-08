@@ -82,7 +82,16 @@ public class App {
                     System.out.println("Type your source Destination");
                     dest = scanner.next();
 
+                    if (src.isEmpty() || dest.isEmpty()) {
+                        System.out.println("Source or Destination cannot be empty");
+                        break;
+                    }
+
                     List<Train> trains = userBookingService.getTrains(src,dest);
+                    if (trains.isEmpty()) {
+                        System.out.println("No trains found for provided source and destination");
+                        break;
+                    }
                     int index = 1; // Start from 1 for the first train
 
                     for (Train t : trains) {
@@ -99,7 +108,13 @@ public class App {
                         index++;
                     }
                     System.out.println("Select a train by typing 1,2,3..");
-                    trainSelectedForBooking = trains.get(scanner.nextInt() - 1);
+                    int trainIndex = scanner.nextInt();
+                    if (trainIndex < 1 || trainIndex > trains.size()) {
+                        System.out.println("Invalid selection. Please select a valid train number");
+                        break;
+                    }
+                    trainSelectedForBooking = trains.get(trainIndex - 1);
+                    System.out.println("You have selected train #" + trainIndex + " - " + trainSelectedForBooking.getTrainName());
                     break;
 
                 case 5:

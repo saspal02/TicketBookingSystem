@@ -17,7 +17,7 @@ public class UserBookingService {
     private List<User> userList;
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    private static final String USERS_FILE_PATH = "/home/saswat/Desktop/IRCTC/app/src/main/resources/localdb/users.json";
+    private static final String USERS_FILE_PATH = "app/src/main/resources/localdb/users.json";
 
     public UserBookingService(User user) throws IOException {
         this.user = user;
