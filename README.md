@@ -11,7 +11,7 @@ The command line interface will look like this:
     4. Search Trains
     5. Book a Seat
     6. Cancel Booking
-    7. Exit the app``
+    7. Exit the app
 
 You can select an option by entering the corresponding number.
 
