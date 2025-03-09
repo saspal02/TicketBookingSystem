@@ -20,6 +20,7 @@ Before you start using the Ticket Booking System, make sure you have the followi
 
 1. Java Development Kit (JDK) version 8 or higher.
 2. A terminal or an IDE (e.g., IntelliJ IDEA, Eclipse) to run the project.
+3. Gradle for dependency management.
 
 Clone the repository and run it in your IDE
 
